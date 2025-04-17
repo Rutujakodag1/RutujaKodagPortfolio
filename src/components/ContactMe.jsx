@@ -21,7 +21,7 @@ const ContactMe = () => {
 
   return (
     <section id="contact" className="py-10">
-      <div className="min-h-screen px-4 sm:px-8 md:px-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-16">
         <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">Contact Me</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Form */}
