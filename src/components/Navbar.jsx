@@ -8,7 +8,7 @@ const NavBar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-darkBlue text-white font-play uppercase">
+    <nav className="bg-white text-white font-play uppercase">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <a className="text-xl sm:text-2xl font-bold flex items-center gap-2" href="#">

@@ -92,6 +92,7 @@
 import { useState, useRef } from 'react';
 import { motion, useMotionValue } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
+import { Link } from 'react-router-dom';
 const HeroSlider = () => {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const heroRef = useRef(null);
@@ -149,7 +150,9 @@ const HeroSlider = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span className="relative z-10">Explore My Work</span>
+          <Link to="/projects">
+          <span className="relative z-10 text-white">Explore My Work</span>
+          </Link>
           <motion.span
             className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-400 opacity-0"
             animate={{
@@ -164,7 +167,7 @@ const HeroSlider = () => {
         </motion.button>
 
         {/* Scroll Indicator */}
-        <motion.div
+        {/* <motion.div
           className="absolute bottom-10 left-1/2 -translate-x-1/2"
           animate={{
             y: [0, 15, 0],
@@ -187,7 +190,7 @@ const HeroSlider = () => {
               }}
             />
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
     

@@ -84,7 +84,7 @@ const SkillCard = ({ icon, skillName, proficiencyLabel }) => {
 // SkillSection component to render skills
 const SkillSection = () => {
   return (
-    <div className="bg-gradient-to-b from-[#EEE1DB] to-[#DEECE1] py-16">
+    <div className=" py-16">
     <h2 className="text-4xl font-extrabold mb-4 text-center text-gray-800 dark:text-white">My Skills</h2>
     <p className="text-lg font-medium mb-4 text-center text-gray-600 dark:text-gray-300">
       A showcase of my technical skills and proficiencies across various tools, platforms, and technologies.
