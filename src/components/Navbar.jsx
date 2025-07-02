@@ -36,7 +36,7 @@ const NavBar = ({ darkMode, setDarkMode }) => {
         <ul className="hidden md:flex md:items-center md:space-x-8 text-sm sm:text-base">
           <li><a href="/" className="hover:text-blue-500 dark:text-white">Home</a></li>
           <li><a href="/about" className="hover:text-blue-500 dark:text-white">About Me</a></li>
-          <li><a href="/RutujaKodagResume.pdf" className="hover:text-blue-500 dark:text-white">Resume</a></li>
+          <li><a href="/RutujaKodagSknResume.pdf" className="hover:text-blue-500 dark:text-white">Resume</a></li>
           <li><a href="/skills" className="hover:text-blue-500 dark:text-white">Skills</a></li>
           <li><a href="/projects" className="hover:text-blue-500 dark:text-white">Projects</a></li>
           <li><a href="/contact" className="hover:text-blue-500 dark:text-white">Contact Me</a></li>
@@ -83,7 +83,7 @@ const NavBar = ({ darkMode, setDarkMode }) => {
           <ul className="space-y-4 ">
             <li><a href="/" className="block hover:text-blue-400 dark:text-white">Home</a></li>
             <li><a href="/about" className="block hover:text-blue-400 dark:text-white">About Me</a></li>
-            <li><a href="/RutujaKodagResume.pdf" className="block hover:text-blue-400 dark:text-white">Resume</a></li>
+            <li><a href="/RutujaKodagSknResume.pdf" className="block hover:text-blue-400 dark:text-white">Resume</a></li>
             <li><a href="/skills" className="block hover:text-blue-400 dark:text-white">Skills</a></li>
             <li><a href="/projects" className="block hover:text-blue-400 dark:text-white">Projects</a></li>
             <li><a href="/contact" className="block hover:text-blue-400 dark:text-white">Contact Me</a></li>
