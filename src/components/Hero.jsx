@@ -89,46 +89,33 @@
 // export default HeroSlider;
 
 
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useMotionValue } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-router-dom';
+
 const HeroSlider = () => {
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const heroRef = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  // const rotateX = useTransform(y, [0, window.innerHeight], [10, -10]);
-  // const rotateY = useTransform(x, [0, window.innerWidth], [-10, 10]);
 
-  // Handle mouse movement for 3D tilt effect
+  // Handle mouse movement for 3D tilt effect (if you'd like to add transforms later)
   const handleMouseMove = (e) => {
     const rect = heroRef.current.getBoundingClientRect();
     x.set(e.clientX - rect.left);
     y.set(e.clientY - rect.top);
-    setCursorPos({ x: e.clientX, y: e.clientY });
   };
 
-  // Particles effect
-  // const particles = Array.from({ length: 30 }).map((_, i) => ({
-  //   id: i,
-  //   x: Math.random() * 100,
-  //   y: Math.random() * 100,
-  //   size: Math.random() * 3 + 1,
-  // }));
-
   return (
-    <div 
+    <div
       ref={heroRef}
-      className="relative h-[500px] w-full overflow-hidden bg-gray-900"
+      className="relative h-[500px] w-full overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a]"
       onMouseMove={handleMouseMove}
     >
-
-
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 border">
         {/* Typing Headline */}
-        <div className="text-5xl md:text-7xl font-bold text-white mb-6">
+        <div className="text-5xl md:text-7xl font-bold text-white tracking-wide mb-6">
           <TypeAnimation
             sequence={[
               'Hello World!',
@@ -145,26 +132,26 @@ const HeroSlider = () => {
         </div>
 
         {/* Glowing Button */}
-        <motion.button
-          className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium relative overflow-hidden"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <Link to="/projects">
-          <span className="relative z-10 text-white">Explore My Work</span>
-          </Link>
-          <motion.span
-            className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-400 opacity-0"
-            animate={{
-              opacity: [0, 0.5, 0],
-              x: [-100, 200],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-            }}
-          />
-        </motion.button>
+        <Link to="/projects">
+          <motion.button
+            className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium relative overflow-hidden"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="relative z-10">Explore My Work</span>
+            <motion.span
+              className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-400 opacity-0"
+              animate={{
+                opacity: [0, 0.8, 0],
+                x: [-100, 200],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+              }}
+            />
+          </motion.button>
+        </Link>
 
         {/* Scroll Indicator */}
         {/* <motion.div
@@ -181,8 +168,8 @@ const HeroSlider = () => {
             <motion.div
               className="w-1 h-2 bg-white rounded-full mt-2"
               animate={{
-                y: [0, 5],
-                opacity: [1, 0],
+                y: [0, 5, 0],
+                opacity: [1, 0, 1],
               }}
               transition={{
                 duration: 1.5,
@@ -193,7 +180,6 @@ const HeroSlider = () => {
         </motion.div> */}
       </div>
     </div>
-    
   );
 };
 

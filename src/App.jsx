@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import NavBar from './components/Navbar';
 import Banner from './components/Banner';
 import SkillSection from './components/skill';
@@ -12,11 +12,41 @@ import ProjectsSection from './components/Projects';
 import HeroSlider from './components/Hero';
 import Footer from './components/Footer';
 function App() {
+
+const [darkMode, setDarkMode] = useState(() => {
+  const savedTheme = localStorage.getItem('theme');
+  return savedTheme === 'dark';
+});
+    // Load theme preference
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      setDarkMode(true);
+    } else if (savedTheme === 'light') {
+      setDarkMode(false);
+    }
+  }, []);
+
+  // Apply theme + save preference
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [darkMode]);
+
   return (
-    <div className='min-h-screen bg-gradient-to-b from-[#EEE1DB] to-[#DEECE1]'>
+    <div className="bg-gradient-to-br 
+from-white via-gray-100 to-gray-200 
+dark:from-[#0f172a] dark:via-[#1e293b] dark:to-[#334155] 
+text-[#1f2937] dark:text-[#f8fafc] min-h-screen transition-colors">
+
       <Router>
         {/* Navbar */}
-        <NavBar />
+        <NavBar darkMode={darkMode} setDarkMode={setDarkMode}/>
 
         {/* Main Content */}
         <Routes>
@@ -27,7 +57,7 @@ function App() {
               <>
                 <HeroSlider />
                 <Banner />
-                <div className="border-t-2 border-gray-400 dark:border-gray-600 mx-auto my-4 w-40 sm:w-60 md:w-80 lg:w-96 xl:w-[1250px] mb-10"></div>
+                {/* <div className="border-t-2 border-gray-400 dark:border-gray-600 mx-auto my-4 w-40 sm:w-60 md:w-80 lg:w-96 xl:w-[1250px] mb-10"></div> */}
 
                 <SkillSection />
                 <Achievements />

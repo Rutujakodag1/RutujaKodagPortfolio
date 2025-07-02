@@ -56,6 +56,11 @@ const databases = [
     proficiencyLabel: 'Proficient in MySQL, with experience in database creation, optimization, and management for efficient data storage and retrieval.' 
   },
   { 
+    icon: mysqlIcon, 
+    skillName: 'postgreSql', 
+    proficiencyLabel: 'Proficient in postgresql, with experience in database creation, optimization, and management for efficient data storage and retrieval.' 
+  },
+  { 
     icon: sqliteIcon, 
     skillName: 'SQLite', 
     proficiencyLabel: 'Proficient in SQLite, using it as an efficient embedded database solution for local data storage on devices.' 
@@ -71,7 +76,7 @@ const operatingSystems = [
 // SkillCard component
 const SkillCard = ({ icon, skillName, proficiencyLabel }) => {
   return (
-    <div className="relative bg-gradient-to-br from-white to-gray-100 p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out text-center ml-6 mr-6">
+    <div className="relative p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out text-center ml-6 mr-6 border">
       {icon && <img src={icon} alt={`${skillName} icon`} className="mx-auto w-20 h-20 mb-4" />}
       <h3 className="text-2xl font-semibold mb-2 text-gray-900 dark:text-white">{skillName}</h3>
       <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{proficiencyLabel}</p>
@@ -84,7 +89,7 @@ const SkillCard = ({ icon, skillName, proficiencyLabel }) => {
 // SkillSection component to render skills
 const SkillSection = () => {
   return (
-    <div className=" py-16">
+    <div className=" py-16 border">
     <h2 className="text-4xl font-extrabold mb-4 text-center text-gray-800 dark:text-white">My Skills</h2>
     <p className="text-lg font-medium mb-4 text-center text-gray-600 dark:text-gray-300">
       A showcase of my technical skills and proficiencies across various tools, platforms, and technologies.

@@ -55,17 +55,17 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-16">
+    <section id="projects" className="py-16 border">
     <div className="max-w-screen-xl mx-auto px-6">
-      <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">My Projects</h2>
+      <h2 className="text-4xl font-bold text-center mb-12">My Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {projects.map((project, index) => (
-          <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden transition-transform hover:scale-105">
+          <div key={index} className="shadow-md rounded-lg overflow-hidden transition-transform hover:scale-105 border">
             <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
             <div className="p-5">
-              <h3 className="text-xl font-semibold text-gray-800">{project.title}</h3>
-              <p className="text-gray-600 mt-2 text-sm">{project.description}</p>
-              <p className="text-gray-500 text-sm mt-3">Tech Stack: {project.techStack.join(", ")}</p>
+              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <p className=" mt-2 text-sm">{project.description}</p>
+              <p className=" text-sm mt-3">Tech Stack: {project.techStack.join(", ")}</p>
               <div className="mt-4 flex space-x-4 text-sm">
                 {project.demoLink && (
                   <a
@@ -81,7 +81,7 @@ const ProjectsSection = () => {
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-800 hover:underline"
+                  className="text-blue-600 hover:underline"
                 >
                   GitHub
                 </a>
