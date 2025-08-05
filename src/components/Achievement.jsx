@@ -9,42 +9,84 @@ import runnerUp2 from '../assets/algomind2.jpg';
 import runnerUp3 from '../assets/algomind3.jpg';
 import runnerUp4 from '../assets/algomind4.jpg';
 import runnerUp5 from '../assets/hack.jpg';
+// import star from './assets/star.png';
+// import python_basic from './assets/python_basic.png';
+// import sql from './assets/sql.png';
+import sql_intermediate from '../assets/sql_intermediate.jpg';
+import problem_solving from '../assets/problem_solving.jpg';
+import aws_cloud from '../assets/aws_cloud.png';
+import software_engineering_intern from '../assets/software_engineer_intern.jpg';
+import intern_certi from '../assets/wsa_internship_certificate.jpg';
+// import wsa from './assets/wsa.png';
+// import webstack from './assets/webstack.png';
+// import hackerrank_intern from './assets/hackerrank_intern.png';
+
 
 // import sql from "../assets"
 const Achievements = () => {
   const [selectedImage, setSelectedImage] = useState(null); // Track the selected image
   const scrollRef = useRef(null);
   const certifications = [
-    {
-      title: "Python 5-star Badge",
-      image: star,
-      description: "HackerRank 5-star badge for Python programming skills.",
-    },
-    {
-      title: "Python Certification",
-      image: python_basic,
-      description: "Certified by HackerRank for completing the Python Basics challenge.",
-    },
-    {
-      title: "SQL Certification",
-      image: sql,
-      description: "Certified by HackerRank for completing the SQL Basics challenge.",
-    },
-    {
-      title: "WSA Gold Badge",
-      image: wsa,
-      description: "Awarded for excellence in web development by WebStack Academy.",
-    },
+  {
+    title: "Python 5-star Badge",
+    image: star,
+    description: "HackerRank 5-star badge for Python programming skills.",
+  },
+  {
+    title: "Python Certification",
+    image: python_basic,
+    description: "Certified by HackerRank for completing the Python Basics challenge.",
+  },
+  {
+    title: "SQL Certification",
+    image: sql,
+    description: "Certified by HackerRank for completing the SQL Basics challenge.",
+  },
+  {
+    title: "SQL Intermediate Certification",
+    image: sql_intermediate,
+    description: "Certified by HackerRank for completing the SQL Intermediate challenge.",
+  },
+  {
+    title: "Problem Solving Certificate",
+    image: problem_solving,
+    description: "Certified by HackerRank for Problem Solving skills.",
+  },
+  {
+    title: "AWS Cloud Practitioner Certificate",
+    image: aws_cloud,
+    description: "Certified as AWS Certified Cloud Practitioner by Amazon Web Services.",
+  },
+  {
+    title: "Software Engineering Virtual Experience",
+    image: software_engineering_intern,
+    description: "Completed Software Engineering Intern Role Virtual Experience Program.",
+  },
+  {
+    title: "WSA Gold Badge",
+    image: wsa,
+    description: "Awarded for excellence in web development by WebStack Academy.",
+  },
+  {
+    title: "WebStack Academy Internship Certificate",
+    image: intern_certi,
+    description: "Certificate for completing the MERN stack internship project.",
+  },
+  // {
+  //   title: "HackerRank Internship Certificate",
+  //   // image: hackerrank_intern,
+  //   description: "Official internship certificate from HackerRank.",
+  // }
+];
 
-  ];
 
-  const achievements = [
-    {
-      title: "Runner-Up | Sinhgad Hackathon 2K25",
-      images: [runnerUp1, runnerUp2, runnerUp3, runnerUp4, runnerUp5], // multiple images
-      description: "Secured runner-up position at Sinhgad Hackathon 2K25 for our innovative CareerXpert AI project.",
-    },
-  ];
+    const achievements = [
+      {
+        title: "Runner-Up | Sinhgad Hackathon 2K25",
+        images: [runnerUp1, runnerUp2, runnerUp3, runnerUp4, runnerUp5], // multiple images
+        description: "Secured runner-up position at Sinhgad Hackathon 2K25 for our innovative CareerXpert AI project.",
+      },
+    ];
 
 
   const scroll = (direction) => {

@@ -19,6 +19,8 @@ import gfg from '../assets/gfg.jpg';
 import codechef from '../assets/codechef.jpg';
 import android from '../assets/android.png';
 import leetcode from '../assets/leetcode.png';
+
+import postgresql from '../assets/postgresql.png'
 // Skills data
 const programmingLanguages = [
   { icon: python, skillName: 'Python', proficiencyLabel: 'Expert in Python with a 5-star rating on HackerRank, demonstrating the ability to develop efficient and clean code for various applications.' },
@@ -56,7 +58,7 @@ const databases = [
     proficiencyLabel: 'Proficient in MySQL, with experience in database creation, optimization, and management for efficient data storage and retrieval.' 
   },
   { 
-    icon: mysqlIcon, 
+    icon: postgresql, 
     skillName: 'postgreSql', 
     proficiencyLabel: 'Proficient in postgresql, with experience in database creation, optimization, and management for efficient data storage and retrieval.' 
   },

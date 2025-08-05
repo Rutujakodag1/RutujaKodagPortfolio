@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import RutujaProfile from '../assets/RutujaProfile.jpg';
+import RutujaProfile from '../assets/RutujaProfile.png';
 
 const Banner = () => {
   return (
     <div className="w-full bg-cover bg-center py-10 md:py-0 md:h-screen flex items-center border">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+      <div className="container mx-auto px-10 flex flex-col md:flex-row items-center justify-between">
         
         {/* Left Section - Text */}
         <div className="text-gray-800 dark:text-white space-y-6 font-play w-full md:w-2/3 text-center md:text-left">
@@ -31,7 +31,7 @@ const Banner = () => {
         </div>
 
         {/* Right Section - Image */}
-        <div className="w-full md:w-1/3 lg:w-1/4 flex justify-center mt-8 md:mt-0">
+        <div className="w-full md:w-1/3 lg:w-1/4 flex justify-center mt-8 md:mt-0 mr-8">
   <img
     src={RutujaProfile}
     alt="Rutuja's Profile"

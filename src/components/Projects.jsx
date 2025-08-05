@@ -14,16 +14,16 @@ const projects = [
     title: " Vitthal Rukmini Temple Donation Portal",
     description: "A platform for managing temple activities, events, and donations.",
     techStack: ["React", "Django REST Framework", "Tailwind", "PostgreSQL"],
-    image: "vite.svg",
+    image: "/assets/vitthalrukmini.png",
     // demoLink: "https://project-demo.com",
-    githubLink: "https://github.com/ChaitanyaKulkarni001/shri_vitthal_rukmini-samitee",
+    // githubLink: "https://github.com/ChaitanyaKulkarni001/shri_vitthal_rukmini-samitee",
   },
   {
     title: "PetCareX (Smart PetCare Shop)",
     description: "A pet care and e-commerce platform with features like doctor consultations and product store.",
     techStack: ["React", "Vite", "Django REST Framework", "Tailwind", "PostgreSQL"],
     image: "/assets/petcarex.png",
-    demoLink: "https://project-demo.com",
+    // demoLink: "https://project-demo.com",
     githubLink: "https://github.com/Rutujakodag1/PetCareX",
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     description: "A personal portfolio built with React to showcase skills and projects.",
     techStack: ["React", "Tailwind CSS"],
     image: "/assets/portfolio.png",
-    demoLink: "https://rutuja-kodag-portfolio.vercel.app/",
+    demoLink: "https://rutuja-kodag.vercel.app/",
     githubLink: "https://github.com/Rutujakodag1/RutujaKodagPortfolio",
   },
   {
@@ -77,6 +77,7 @@ const ProjectsSection = () => {
                     View Demo
                   </a>
                 )}
+                {project.githubLink && (
                 <a
                   href={project.githubLink}
                   target="_blank"
@@ -85,6 +86,7 @@ const ProjectsSection = () => {
                 >
                   GitHub
                 </a>
+                )}
               </div>
             </div>
           </div>
