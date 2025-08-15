@@ -20,13 +20,19 @@ import intern_certi from '../assets/wsa_internship_certificate.jpg';
 // import wsa from './assets/wsa.png';
 // import webstack from './assets/webstack.png';
 // import hackerrank_intern from './assets/hackerrank_intern.png';
-
-
+import rec1 from '../assets/rec1.jpg';
+import rec2 from '../assets/rec2.jpg';
+import leetcode_badge from '../assets/leetcode_badge.jpg';
 // import sql from "../assets"
 const Achievements = () => {
   const [selectedImage, setSelectedImage] = useState(null); // Track the selected image
   const scrollRef = useRef(null);
   const certifications = [
+   {
+  title: "LeetCode 50+ Days of Problem Solving",
+  image: leetcode_badge, // make sure you import the badge image
+  description: "Completed 50+ days of consistent problem-solving on LeetCode, strengthening algorithms, data structures, and competitive programming skills.",
+},
   {
     title: "Python 5-star Badge",
     image: star,
@@ -53,25 +59,25 @@ const Achievements = () => {
     description: "Certified by HackerRank for Problem Solving skills.",
   },
   {
-    title: "AWS Cloud Practitioner Certificate",
+    title: "AWS Cloud Practitioner Essential Certificate",
     image: aws_cloud,
-    description: "Certified as AWS Certified Cloud Practitioner by Amazon Web Services.",
+    description: "Certified as AWS Certified Cloud Practitioner Essential by Amazon Web Services.",
   },
-  {
-    title: "Software Engineering Virtual Experience",
-    image: software_engineering_intern,
-    description: "Completed Software Engineering Intern Role Virtual Experience Program.",
-  },
+  // {
+  //   title: "Software Engineering Virtual Experience",
+  //   image: software_engineering_intern,
+  //   description: "Completed Software Engineering Intern Role Virtual Experience Program.",
+  // },
   {
     title: "WSA Gold Badge",
     image: wsa,
     description: "Awarded for excellence in web development by WebStack Academy.",
   },
-  {
-    title: "WebStack Academy Internship Certificate",
-    image: intern_certi,
-    description: "Certificate for completing the MERN stack internship project.",
-  },
+ {
+  title: "WebStack Academy Internship Certificate",
+  image: intern_certi,
+  description: "Certificate for completing the Frontend Developer Intern role at WebStack Academy, working on MERN stack projects and frontend development tasks.",
+}
   // {
   //   title: "HackerRank Internship Certificate",
   //   // image: hackerrank_intern,
@@ -86,6 +92,11 @@ const Achievements = () => {
         images: [runnerUp1, runnerUp2, runnerUp3, runnerUp4, runnerUp5], // multiple images
         description: "Secured runner-up position at Sinhgad Hackathon 2K25 for our innovative CareerXpert AI project.",
       },
+        {
+    title: "Recognition by Deputy Collector",
+    images: [rec1, rec2], // your 2 photos
+    description: "Received official recognition from the Deputy Collector for outstanding contribution in the 'Official Donation Management System – Shri Vitthal Rukmini Mandir Committee, Pandharpur', showcasing leadership and impact.",
+  },
     ];
 
 
@@ -100,45 +111,59 @@ const Achievements = () => {
   return (
     <>
       <section id="achievements" className="py-10 border">
-        <div className="container mx-auto px-4 text-gray-600 dark:text-white">
+        <div className="container mx-auto px-12 text-gray-600 dark:text-white">
           <h2 className="text-3xl font-bold text-center mb-8">Achievements</h2>
 
           <div className="relative flex flex-col gap-12 w-full">
             {achievements.map((item, index) => (
-              <div key={index} className="flex flex-col md:flex-row gap-8 items-start w-full" >
-                {/* Left side - Main Achievement Image */}
-                <div className="w-full md:w-1/2" onClick={() => setSelectedImage(item.images[0])}>
-                  <img
-                    src={item.images[0]}
-                    alt={item.title}
-                    className="w-full max-h-100 object-cover rounded-lg shadow-lg"
-                  />
-                </div>
+  <div key={index} className="flex flex-col md:flex-row gap-8 items-start w-full">
+    
+    {/* Left side - Main Image */}
+    <div className="w-full md:w-1/2" onClick={() => setSelectedImage(item.images[0])}>
+      <img
+        src={item.images[0]}
+        alt={item.title}
+        className="w-full max-h-100 object-cover rounded-lg shadow-lg"
+      />
+    </div>
 
-                {/* Right side - Achievement Description and Additional Images */}
-                <div className="w-full md:w-1/2">
-                  <h3 className="text-xl font-semibold ">{item.title}</h3>
-                  <p className="text-sm  mt-2">{item.description}</p>
+    {/* Right side - Description & Additional Image(s) */}
+    <div className="w-full md:w-1/2 flex flex-col gap-4">
+      <h3 className="text-xl font-semibold">{item.title}</h3>
+      <p className="text-sm mt-2">{item.description}</p>
 
-                  {/* Additional Images */}
-                  <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 mt-4">
-                    {item.images.slice(1, 5).map((img, i) => (
-                      <img
-                        key={i}
-                        src={img}
-                        alt={`additional-photo-${i}`}
-                        className="w-full h-[120px] sm:h-[185px] object-cover rounded-lg shadow-md"
+      {/* If more than 2 images, show grid (like first achievement) */}
+      {item.images.length > 2 && (
+        <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 mt-4">
+          {item.images.slice(1).map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt={`additional-photo-${i}`}
+              className="w-full h-[120px] sm:h-[185px] object-cover rounded-lg shadow-md"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImage(img);
+              }}
+            />
+          ))}
+        </div>
+      )}
 
-                        onClick={(e) => {
-                          e.stopPropagation(); // prevent parent click
-                          setSelectedImage(img);
-                        }}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+      {/* If exactly 2 images, show the second image separately */}
+      {item.images.length === 2 && (
+        <img
+          src={item.images[1]}
+          alt="second-photo"
+          className="w-full max-h-[400px] object-cover rounded-lg shadow-md mt-4"
+          onClick={() => setSelectedImage(item.images[1])}
+        />
+      )}
+    </div>
+  </div>
+))}
+
+
           </div>
         </div>
       </section>

@@ -2,18 +2,24 @@ import React, { useState } from "react";
 import emailjs from 'emailjs-com';
 const ContactMe = () => {
   const [statusMessage, setStatusMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   // Function to send email using emailjs
   function sendEmail(e) {
     e.preventDefault(); // Prevent the default form submission
-
+    setLoading(true); // start loading immediately
+    const form = e.target;
+    const userName = form.from_name.value; // store name before reset
     emailjs.sendForm('service_uvz0vvk', 'template_tdpfhc9', e.target, '6grf2-XKC5Z5HunXZ')
       .then((result) => {
+          setLoading(false);
           // Display success message and reset the form
-          setStatusMessage('Your message has been sent successfully!');
+          setStatusMessage(`Thank you ${userName}, your message has been sent successfully!`);
+          setTimeout(() => setStatusMessage(''), 5000);
           e.target.reset();  // Reset the form fields after successful submission
       }, (error) => {
           // Display error message
+          setLoading(false);
           setStatusMessage('There was an error sending your message. Please try again later.');
           console.log(error.text); // Logs any errors to the console
       });
@@ -39,7 +45,7 @@ const ContactMe = () => {
                   type="text"
                   id="name"
                   name="from_name"
-                  className="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                  className="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500 dark:bg-gray-700"
                   placeholder="Enter your name"
                   required
                 />
@@ -55,7 +61,7 @@ const ContactMe = () => {
                   type="email"
                   id="email"
                   name="from_email"
-                  className="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                  className="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500 dark:bg-gray-700"
                   placeholder="Enter your email"
                   required
                 />
@@ -70,7 +76,7 @@ const ContactMe = () => {
                 <textarea
                   id="message"
                   name="html_message"
-                  className="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                  className="w-full mt-1 p-2 border rounded-md focus:ring-2 focus:ring-blue-500 dark:bg-gray-700"
                   rows="5"
                   placeholder="Write your message"
                   required
@@ -79,8 +85,9 @@ const ContactMe = () => {
               <button
                 type="submit"
                 className="w-full bg-blue-500 py-2 px-4 rounded-md hover:bg-blue-600 focus:ring-2 focus:ring-blue-300"
+                disabled = {loading}
               >
-                Send Message
+                {loading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
 
@@ -122,7 +129,7 @@ const ContactMe = () => {
                 <i className="fab fa-linkedin"></i>
               </a>
               <a
-                href="mailto:rutujakodag0@gmail.com"
+                href="mailto:kodagrutuja0@gmail.com"
                 className="text-red-500 hover:text-red-700 text-3xl"
                 title="Email"
               >

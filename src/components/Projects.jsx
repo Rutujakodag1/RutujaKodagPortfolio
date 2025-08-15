@@ -55,10 +55,10 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-16 border">
-    <div className="max-w-screen-xl mx-auto px-6">
+    <section id="projects" className="py-10 border">
+    <div className="mx-auto px-12">
       <h2 className="text-4xl font-bold text-center mb-12">My Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
         {projects.map((project, index) => (
           <div key={index} className="shadow-md rounded-lg overflow-hidden transition-transform hover:scale-105 border">
             <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />

@@ -1,5 +1,5 @@
 import React from 'react';
-import reactIcon from '../assets/react.jpeg';
+import reactIcon from '../assets/react.png';
 import django from '../assets/dj.png';
 import python from '../assets/python.png';
 import html from '../assets/html.png';
@@ -19,19 +19,45 @@ import gfg from '../assets/gfg.jpg';
 import codechef from '../assets/codechef.jpg';
 import android from '../assets/android.png';
 import leetcode from '../assets/leetcode.png';
-
+import drf from '../assets/drf.png';
 import postgresql from '../assets/postgresql.png'
 // Skills data
 const programmingLanguages = [
-  { icon: python, skillName: 'Python', proficiencyLabel: 'Expert in Python with a 5-star rating on HackerRank, demonstrating the ability to develop efficient and clean code for various applications.' },
-  { icon: html, skillName: 'HTML', proficiencyLabel: 'Well-versed in HTML5, capable of structuring and formatting web pages effectively, ensuring accessibility and semantic accuracy.' },
-  { icon: css, skillName: 'CSS', proficiencyLabel: 'Skilled in CSS, applying advanced design techniques to create engaging and responsive user interfaces for improved user experience.' },
-  { icon: java, skillName: 'Java', proficiencyLabel: 'Experienced with simple Java programming, with a strong foundation in core concepts and problem-solving skills.' },
-  { icon: c, skillName: 'C', proficiencyLabel: 'Proficient in C, with a solid foundation in data structures and algorithms. Skilled in writing optimized code for efficient problem-solving.' },
+  { 
+    icon: python, 
+    skillName: 'Python', 
+    proficiencyLabel: 'Proficient in Python, with strong problem-solving skills and experience in web development using Django and APIs.' 
+  },
+  { 
+    icon: html, 
+    skillName: 'HTML', 
+    proficiencyLabel: 'Proficient in HTML5, with experience creating responsive and semantic web pages.' 
+  },
+  { 
+    icon: css, 
+    skillName: 'CSS', 
+    proficiencyLabel: 'Proficient in CSS3 and Tailwind, creating responsive and visually appealing user interfaces.' 
+  },
+  { 
+    icon: java, 
+    skillName: 'Java', 
+    proficiencyLabel: 'Basic knowledge of Java programming with a solid foundation in core concepts and problem-solving.' 
+  },
+  { 
+    icon: c, 
+    skillName: 'C', 
+    proficiencyLabel: 'Proficient in C, with a strong foundation in data structures, algorithms, and problem-solving skills.' 
+  },
 ];
+
 
 const frameworksLibraries = [
   { icon: django, skillName: 'Django', proficiencyLabel: 'Experienced in Django for web development, leveraging it to build scalable and secure web applications.' },
+  { 
+  icon: drf, // you can use the same Django icon or a DRF icon if you have one
+  skillName: 'Django REST Framework (DRF)', 
+  proficiencyLabel: 'Experienced in DRF for building RESTful APIs, enabling efficient communication between frontend and backend with serialization, authentication, and permission handling.' 
+},
   { icon: reactIcon, skillName: 'React', proficiencyLabel: 'Skilled in React for creating dynamic user interfaces and responsive single-page applications.' },
   { icon: tailwind, skillName: 'Tailwind CSS', proficiencyLabel: 'Utilized Tailwind CSS to implement modern, responsive designs efficiently in web projects.' },
 ];
@@ -40,15 +66,15 @@ const toolsPlatforms = [
   { icon: gitIcon, skillName: 'Git', proficiencyLabel: 'Proficient in using Git for version control to manage and track code changes effectively.' },
   { icon: githubIcon, skillName: 'GitHub', proficiencyLabel: 'Experienced with GitHub for collaboration, code sharing, and project management.' },
   { icon: vsCodeIcon, skillName: 'VS Code', proficiencyLabel: 'Extensive experience with Visual Studio Code, using it as the primary editor for code development and debugging.' },
-  { 
-    icon: leetcode, 
-    skillName: 'LeetCode', 
-    proficiencyLabel: 'LeetCode is a coding platform where I have solved numerous problems, improving my data structures and algorithms skills. It has been instrumental in preparing me for coding interviews and competitive programming.' 
-  },
+{
+  icon: leetcode,
+  skillName: 'LeetCode',
+  proficiencyLabel: 'LeetCode is a coding platform where I have solved over 150 problems, earning a 50+ days badge. This consistent practice has significantly strengthened my data structures and algorithms skills, and has been instrumental in preparing me for coding interviews and competitive programming.'
+},
   { icon: hackerrank, skillName: 'Hackerrank', proficiencyLabel: 'Hackerrank is a coding platform where I have achieved a 5-star rank in Python and 2 stars in SQL. This platform has been essential in enhancing my problem-solving and coding skills.' },
   { icon: codechef, skillName: 'CodeChef', proficiencyLabel: 'CodeChef has been a valuable platform for honing my competitive programming skills, helping me strengthen my problem-solving abilities for coding competitions and technical interviews.' },
   { icon: gfg, skillName: 'GeeksforGeeks', proficiencyLabel: 'GeeksforGeeks has served as a critical resource for deepening my understanding of data structures, algorithms, and coding concepts through hands-on practice.' },
-  { icon: android, skillName: 'Android Studio',   proficiencyLabel: 'Intermediate with Android Studio, leveraging Java and XML for mobile app development, and using its testing and debugging tools.' },
+  // { icon: android, skillName: 'Android Studio',   proficiencyLabel: 'Intermediate with Android Studio, leveraging Java and XML for mobile app development, and using its testing and debugging tools.' },
 ];
 
 const databases = [
@@ -59,7 +85,7 @@ const databases = [
   },
   { 
     icon: postgresql, 
-    skillName: 'postgreSql', 
+    skillName: 'PostgreSQL', 
     proficiencyLabel: 'Proficient in postgresql, with experience in database creation, optimization, and management for efficient data storage and retrieval.' 
   },
   { 
@@ -71,7 +97,7 @@ const databases = [
 
 
 const operatingSystems = [
-  { icon: linuxIcon, skillName: 'Linux', proficiencyLabel: 'Experienced in using Linux for development tasks, including installation, configuration, and command-line operations, supporting efficient software management and system navigation.' },
+  { icon: linuxIcon, skillName: 'Linux', proficiencyLabel: 'Basic knowledge of Linux commands and usage, familiar with navigating the system and performing simple tasks.' },
   { icon: windowsIcon, skillName: 'Windows', proficiencyLabel: 'Skilled in setting up and maintaining Windows systems, with hands-on experience in configuration, troubleshooting, and ensuring stable performance for development and personal use.' },
 ];
 
