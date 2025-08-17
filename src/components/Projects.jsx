@@ -7,7 +7,7 @@ const projects = [
     techStack: ["React", "Django REST Framework", "Tailwind", "PostgreSQL",'Gemini API'],
     image: "/assets/careerexpertai.png",
     // demoLink: "https://project-demo.com",
-    githubLink: "https://github.com/ChaitanyaKulkarni001/CareerXpert_AI-Get-Ready-for-Your-Dream-Job",
+    githubLink: "https://github.com/Rutujakodag1/CareerXpert_AI-Get-Ready-for-Your-Dream-Job.git",
   },
   
   {
@@ -48,7 +48,7 @@ const projects = [
     techStack: ["Django", "HTML", "CSS", "SQLite"],
     image: "/assets/emenu.jpg",
     // demoLink: "https://project-demo.com",
-    githubLink: "https://github.com/Rutujakodag1/MiniProjectFinal",
+    githubLink: "https://github.com/Rutujakodag1/E-Menu.git",
   },
 
 ];
