@@ -19,9 +19,11 @@ const Experience = () => {
       title: "Frontend Developer Intern – WebStack Academy",
       duration: "Jul 2024 – Sep 2024",
       description: [
-        "Developed reusable UI components to enhance application performance, maintainability, and user experience.",
-        "Integrated REST APIs to display and manage dynamic data.",
-        "Ensured responsive design and cross-browser compatibility."
+        "Worked on building and enhancing a scalable web application as part of the frontend development team.",
+        "Developed reusable and optimized React components to improve performance and maintainability.",
+        "Integrated REST APIs to render and manage dynamic, live data.",
+        "Ensured a responsive, user-friendly interface across devices and browsers.",
+        "This internship strengthened my ability to bridge design with functionality, ensuring seamless interaction between frontend experiences and backend systems."
       ],
       image: wsa,
     },
