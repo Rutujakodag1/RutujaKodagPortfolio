@@ -7,15 +7,6 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: "Trainee Developer – Rezoomex",
-      duration: "Aug 2025 – Present",
-      description: [
-        "Recently joined as a Trainee Developer, supporting ongoing development tasks and team workflows.",
-        "Gaining practical experience by gradually contributing to real-world software projects and feature implementations."
-      ],
-      image: rezoomex,
-    },
-    {
       title: "Frontend Developer Intern – WebStack Academy",
       duration: "Jul 2024 – Sep 2024",
       description: [

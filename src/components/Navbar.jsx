@@ -24,7 +24,7 @@ const NavBar = ({ darkMode, toggleTheme }) => {
         <ul className="hidden md:flex md:items-center md:space-x-8 text-sm sm:text-base">
           <li><a href="/" className="hover:text-blue-500 dark:text-white">Home</a></li>
           <li><a href="/about" className="hover:text-blue-500 dark:text-white">About Me</a></li>
-          <li><a href="/RutujaKodagResume.pdf" className="hover:text-blue-500 dark:text-white">Resume</a></li>
+          <li><a href="/CSE_RUTUJA_KODAG.pdf" className="hover:text-blue-500 dark:text-white">Resume</a></li>
           <li><a href="/skills" className="hover:text-blue-500 dark:text-white">Skills</a></li>
           <li><a href="/projects" className="hover:text-blue-500 dark:text-white">Projects</a></li>
           <li><a href="/experience" className="hover:text-blue-500 dark:text-white">Experience</a></li>
